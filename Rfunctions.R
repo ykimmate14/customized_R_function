@@ -1,5 +1,5 @@
-this function takes a dataset as an argument and generates a data frame whose first column shows the dataset's variables and second column shows the class of each variable
-`
+# this function takes a dataset as an argument and generates a data frame whose first column shows the dataset's variables and second column shows the class of each variable
+
 whatClass <- function(data){
   varClass <- character()
   for(i in 1:ncol(data)){
@@ -9,10 +9,10 @@ whatClass <- function(data){
   names(result) <- c("variables", "class")
   return (result)
 }
-`
 
-this function takes a dataset as an argument and generates a data frame whose first column shows the dataset's variables and second column shows the number of NA of each variable
-```
+
+# this function takes a dataset as an argument and generates a data frame whose first column shows the dataset's variables and second column shows the number of NA of each variable
+
 NAnum <- function(data){
   y <- integer()
   for(i in 1:ncol(data)){
@@ -22,4 +22,4 @@ NAnum <- function(data){
   names(result) <- c("variables", "num of NA")
   return (result)
 }
-```
+
