@@ -36,3 +36,14 @@ NofRow <- function(data, c){
     result <- data.frame(uniqueV = list1, count = unlist(list2))
     return(result)
 }
+
+# the function takes data frame as argument and return data frame with 
+# number of unique values for each columns.
+NofUniq <- function(data){
+    list1 <- list()
+    for(i in 1:ncol(data)){
+        list1 <- c(list1, length(unique(data[,i])))
+    }
+    result <- data.frame(columns = names(data), count = unlist(list1))
+    return(result)
+}
